@@ -15,6 +15,14 @@
             public $name;
             public $price;
 
+            // メソッドを定義する
+            public function show_price(string $price) {
+                $this->price = $price;
+            }
+            pubric function show_price() {
+                echo $this->price . '<br>';
+            }
+
             // コントラクタを定義する
             public function __construct(string $name, int $price) {
                 $this->name = $name;
@@ -50,7 +58,7 @@
         echo '<br>';
         print_r($animal);
         echo '<br>';
-        echo $food->price;
+        echo show_price($price;)
         echo '<br>';
         echo $animal->height;
         

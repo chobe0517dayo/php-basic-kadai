@@ -16,7 +16,7 @@
             public $price;
 
             // メソッドを定義する
-            public function show_price(string $price) {
+            public function food_price(string $price) {
                 $this->price = $price;
             }
             pubric function show_price() {
@@ -33,6 +33,7 @@
 
         // インスタンス化する
         $food = new Food('potato', 250);
+        $price = new Food();
 
 
         // クラスを定義する
@@ -52,13 +53,15 @@
 
         // インスタンス化する
         $animal = new Animal('dog', 60, 5000);
+        
 
         // インスタンス$userの各プロパティの値を出力する
         print_r($food);
         echo '<br>';
         print_r($animal);
         echo '<br>';
-        echo show_price($price;)
+        $price->food_price(250);
+        $price->show_price();
         echo '<br>';
         echo $animal->height;
         

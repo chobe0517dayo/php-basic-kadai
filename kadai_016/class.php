@@ -16,10 +16,7 @@
             public $price;
 
             // メソッドを定義する
-            public function food_price(string $price) {
-                $this->price = $price;
-            }
-            pubric function show_price() {
+            public function show_price() {
                 echo $this->price . '<br>';
             }
 
@@ -33,7 +30,6 @@
 
         // インスタンス化する
         $food = new Food('potato', 250);
-        $price = new Food();
 
 
         // クラスを定義する
@@ -42,6 +38,11 @@
             public $name;
             public $height;
             public $weight;
+
+            // メソッドを定義する
+            public function show_height() {
+                echo $this->height . '<br>';
+            }
 
             // コントラクタを定義する
             public function __construct(string $name, int $height, string $weight) {
@@ -60,10 +61,9 @@
         echo '<br>';
         print_r($animal);
         echo '<br>';
-        $price->food_price(250);
-        $price->show_price();
-        echo '<br>';
-        echo $animal->height;
+        $food->show_price();
+        $animal->show_height();
+        
         
 
 
